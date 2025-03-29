@@ -119,13 +119,13 @@ export default {
         if (data.error) {
           this.show = false;
         } else {
-          this.team.countMatches = data.count;
+          this.team.countMatches = data.record.count;
           this.team.country = data.country;
-          this.team.losses = data.losses;
+          this.team.losses = data.record.losses;
           this.team.name = data.name;
           this.team.rookieYear = data.rookie_year;
-          this.team.ties = data.ties;
-          this.team.wins = data.wins;
+          this.team.ties = data.record.ties;
+          this.team.wins = data.record.wins;
           this.show = true;
         }
       }, 400);
